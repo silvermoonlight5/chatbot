@@ -6,15 +6,15 @@ from dotenv import load_dotenv
 # Load .env FIRST
 load_dotenv()
 
-# Force IPv4 (fixes many connection issues)
+
 os.environ["HTTPX_FORCE_IPV4"] = "1"
 
 from openai import OpenAI
 
-# Create client AFTER env is loaded
+
 client = OpenAI()
 
-# ---------- AI LOGIC ----------
+
 
 def ask_ai():
     user_text = user_input.get().strip()
